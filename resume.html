@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header class="header">
+    <h1>Resume Builder</h1>
+    <p>Create your resume easily and have fun!</p>
+  </header>
+
+  <!-- Form and Preview Wrapper -->
+  <div class="container">
+    
+    <!-- Form Section -->
+    <div class="form-container">
+      <form id="resume-form">
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture" accept="image/*" onchange="previewProfilePicture(event)">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" oninput="updatePreview('name', this.value)" placeholder="Your Name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" oninput="updatePreview('email', this.value)" placeholder="Your Email">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" oninput="updatePreview('phone', this.value)" placeholder="Your Phone Number">
+
+        <label for="profile-summary">Profile Summary:</label>
+        <textarea id="profile-summary" name="profile-summary" oninput="updatePreview('summary', this.value)" placeholder="A brief introduction about yourself"></textarea>
+
+        <div id="education-section">
+          <h3>Education</h3>
+        </div>
+        <button type="button" onclick="addEducation()">Add Education</button>
+
+        <div id="experience-section">
+          <h3>Experience</h3>
+        </div>
+        <button type="button" onclick="addExperience()">Add Experience</button>
+
+        <h3>Skills</h3>
+        <div id="skills-input-container">
+          <input type="text" id="skill-input" placeholder="Add a skill">
+          <button type="button" onclick="addSkill()">Add Skill</button>
+        </div>
+        <ul id="skills-list"></ul>
+
+        <button type="reset" onclick="clearPreview()">Clear Form</button>
+      </form>
+    </div>
+
+    <!-- Resume Preview Section -->
+    <div class="resume-preview-container">
+      <div class="resume-card">
+        <img id="preview-profile-picture" src="default-avatar.png" alt="Profile Picture">
+        <h2 id="preview-name">Your Name</h2>
+        <p id="preview-email">Email</p>
+        <p id="preview-phone">Phone</p>
+        <p id="preview-summary">Profile Summary</p>
+        <h3>Education</h3>
+        <div id="preview-education"></div>
+        <h3>Experience</h3>
+        <div id="preview-experience"></div>
+        <h3>Skills</h3>
+        <div id="preview-skills"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="resume.js"></script>
+</body>
+</html>

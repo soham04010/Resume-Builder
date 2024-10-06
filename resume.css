@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body & Background Theme */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    color: #333;
+    padding: 20px;
+  }
+  
+  header.header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  p {
+    color: white;
+    margin-top: 5px;
+  }
+  
+  /* Container Layout */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .form-container,
+  .resume-preview-container {
+    width: 48%;
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  input:hover, textarea:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    background-color: #5cb85c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4cae4c;
+  }
+  
+  #skills-input-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  #skills-list {
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  #skills-list li {
+    display: inline-block;
+    background: #74ebd5;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .resume-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 450px;
+  }
+  
+  .resume-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .resume-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .resume-card p {
+    margin: 5px 0;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .form-container,
+    .resume-preview-container {
+      width: 100%;
+    }
+  }
+  
